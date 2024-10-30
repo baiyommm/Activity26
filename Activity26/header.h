@@ -1,12 +1,17 @@
-//
-//  header.h
-//  Activity26
-//
-//  Created by Chatchapong Thuaypha on 10/28/24.
-//
+#ifndef HEADER_H
+#define HEADER_H
+#include <iostream>
+using namespace std;
 
-#ifndef header_h
-#define header_h
+struct Point {
+    int x, y;
+};
 
+namespace PointFunctions {
+    bool areEqual(const Point& p1, const Point& p2);
+    ostream& printPoint(ostream& os, const Point& point);
+}
 
-#endif /* header_h */
+ostream& operator<<(ostream& os, const Point& point);
+
+#endif

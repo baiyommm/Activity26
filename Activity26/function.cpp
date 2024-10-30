@@ -1,8 +1,16 @@
-//
-//  function.cpp
-//  Activity26
-//
-//  Created by Chatchapong Thuaypha on 10/28/24.
-//
+#include "header.h"
 
-#include <stdio.h>
+namespace PointFunctions {
+    bool areEqual(const Point& p1, const Point& p2) {
+        return p1.x == p2.x && p1.y == p2.y;
+    }
+
+    ostream& printPoint(ostream& os, const Point& point) {
+        os << "(" << point.x << ", " << point.y << ")";
+        return os;
+    }
+}
+
+ostream& operator<<(ostream& os, const Point& point) {
+    return PointFunctions::printPoint(os, point);
+}
